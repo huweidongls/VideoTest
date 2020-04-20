@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lc_bg_color"
+    android:orientation="vertical">
+
+    <com.jingna.videotest.lechange.common.CommonTitle
+        android:id="@id/title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+    <TextView
+        android:id="@+id/tip"
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_margin="15dp"
+        android:text="@string/soft_ap_tip"
+        android:textColor="@android:color/holo_red_light"
+        android:layout_height="wrap_content"
+        tools:targetApi="ice_cream_sandwich" />
+
+    <TextView
+        android:id="@+id/ssid"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/tip"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_red_light"
+        android:text=""
+        tools:targetApi="ice_cream_sandwich" />
+
+    <Button
+        android:id="@+id/start_softAP_config"
+        android:layout_below="@+id/ssid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/start_soft_ap_config" />
+
+    <Button
+        android:id="@+id/start_check_online"
+        android:layout_below="@+id/start_softAP_config"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/start_check_online" />
+
+    <com.jingna.videotest.lechange.common.ProgressDialog
+        android:id="@+id/query_load"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_below="@+id/start_check_online"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:visibility="visible" />
+</RelativeLayout>

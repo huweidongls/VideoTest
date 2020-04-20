@@ -3,4 +3,13 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <!-- Common -->
+    <color name="lc_bg_color">#efeff4</color>
+    <color name="lc_media_color">#000000</color>
+    <!-- Title -->
+    <color name="title_color_background">#FFFFFF</color>
+    <color name="title_color_divider">#CFCFCF</color>
+    <color name="title_color_center">#505166</color>
+
 </resources>

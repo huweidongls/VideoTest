@@ -2,11 +2,26 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jingna.videotest">
 
+    <!-- Required  一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+
     <application
+        android:name=".app.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
@@ -16,6 +31,63 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".lechange.login.SplashActivity"
+            android:alwaysRetainTaskState="true"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".lechange.login.UserLoginActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!--<activity-->
+            <!--android:name="com.lechange.demo.login.AdminLoginActivity"-->
+            <!--android:screenOrientation="portrait">-->
+        <!--</activity>-->
+        <activity
+            android:name=".lechange.login.BindUserActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".lechange.listview.DevicelistActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name =".lechange.manager.DeviceSetActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name = ".lechange.mediaplay.MediaPlayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".lechange.message.AlarmMessageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".lechange.listview.RecordListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".lechange.manager.DeviceConfigWifiActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".lechange.manager.InitDeviceActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <!--<activity android:name="com.lechange.demo.zxing.activity.CaptureActivity"-->
+            <!--android:exported="false"-->
+            <!--android:screenOrientation="portrait"/>-->
+        <activity android:name=".lechange.manager.SoftAPActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

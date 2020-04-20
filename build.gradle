@@ -19,6 +19,10 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url "https://jitpack.io" }
+        mavenCentral()
+        maven {url 'http://developer.huawei.com/repo'}
+        maven { url 'https://fabric-artifacts.s3.amazonaws.com/public' }
     }
 }
 
